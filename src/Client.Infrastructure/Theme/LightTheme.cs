@@ -13,7 +13,7 @@ public class LightTheme : MudTheme
             Background = CustomColors.Light.Background,
             AppbarBackground = CustomColors.Light.AppbarBackground,
             AppbarText = CustomColors.Light.AppbarText,
-            DrawerBackground = CustomColors.Light.Background,
+            DrawerBackground = CustomColors.Light.DrawerBackground,
             DrawerText = "rgba(0,0,0, 0.7)",
             Success = CustomColors.Light.Primary,
             TableLines = "#e0e0e029",
