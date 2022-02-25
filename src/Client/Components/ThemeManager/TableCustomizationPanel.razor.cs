@@ -26,10 +26,10 @@ public partial class TableCustomizationPanel
             _tablePreference = clientPreference.TablePreference;
         }
 
-        IsDense = _tablePreference.IsDense;
-        IsStriped = _tablePreference.IsStriped;
-        HasBorder = _tablePreference.HasBorder;
-        IsHoverable = _tablePreference.IsHoverable;
+        IsDense = !_tablePreference.IsDense;
+        IsStriped = !_tablePreference.IsStriped;
+        HasBorder = !_tablePreference.HasBorder;
+        IsHoverable = !_tablePreference.IsHoverable;
     }
 
     [Parameter]

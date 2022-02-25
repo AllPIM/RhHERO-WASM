@@ -31,9 +31,9 @@ public class FshTable<T> : MudTable<T>
 
     private void SetTablePreference(FshTablePreference tablePreference)
     {
-        Dense = tablePreference.IsDense;
-        Striped = tablePreference.IsStriped;
-        Bordered = tablePreference.HasBorder;
-        Hover = tablePreference.IsHoverable;
+        Dense = !tablePreference.IsDense;
+        Striped = !tablePreference.IsStriped;
+        Bordered = !tablePreference.HasBorder;
+        Hover = !tablePreference.IsHoverable;
     }
 }
