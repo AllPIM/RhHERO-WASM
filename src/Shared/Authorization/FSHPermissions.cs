@@ -26,6 +26,9 @@ public static class FSHResource
     public const string RoleClaims = nameof(RoleClaims);
     public const string Products = nameof(Products);
     public const string Brands = nameof(Brands);
+
+    public const string MotorRacing = nameof(MotorRacing);
+    public const string LuckyFruit = nameof(LuckyFruit);
 }
 
 public static class FSHPermissions
@@ -48,6 +51,11 @@ public static class FSHPermissions
         new("Delete Roles", FSHAction.Delete, FSHResource.Roles),
         new("View RoleClaims", FSHAction.View, FSHResource.RoleClaims),
         new("Update RoleClaims", FSHAction.Update, FSHResource.RoleClaims),
+        new("View Tenants", FSHAction.View, FSHResource.Tenants, IsRoot: true),
+        new("Create Tenants", FSHAction.Create, FSHResource.Tenants, IsRoot: true),
+        new("Update Tenants", FSHAction.Update, FSHResource.Tenants, IsRoot: true),
+        new("Upgrade Tenant Subscription", FSHAction.UpgradeSubscription, FSHResource.Tenants, IsRoot: true),
+
         new("View Products", FSHAction.View, FSHResource.Products, IsBasic: true),
         new("Search Products", FSHAction.Search, FSHResource.Products, IsBasic: true),
         new("Create Products", FSHAction.Create, FSHResource.Products),
@@ -61,10 +69,13 @@ public static class FSHPermissions
         new("Delete Brands", FSHAction.Delete, FSHResource.Brands),
         new("Generate Brands", FSHAction.Generate, FSHResource.Brands),
         new("Clean Brands", FSHAction.Clean, FSHResource.Brands),
-        new("View Tenants", FSHAction.View, FSHResource.Tenants, IsRoot: true),
-        new("Create Tenants", FSHAction.Create, FSHResource.Tenants, IsRoot: true),
-        new("Update Tenants", FSHAction.Update, FSHResource.Tenants, IsRoot: true),
-        new("Upgrade Tenant Subscription", FSHAction.UpgradeSubscription, FSHResource.Tenants, IsRoot: true)
+
+        new("View MotorRacing", FSHAction.View, FSHResource.MotorRacing, IsBasic: true),
+        new("Search MotorRacing", FSHAction.Search, FSHResource.MotorRacing, IsBasic: true),
+        new("Export MotorRacing", FSHAction.Export, FSHResource.MotorRacing),
+        new("View LuckyFruit", FSHAction.View, FSHResource.LuckyFruit, IsBasic: true),
+        new("Search LuckyFruit", FSHAction.Search, FSHResource.LuckyFruit, IsBasic: true),
+        new("Export LuckyFruit", FSHAction.Export, FSHResource.LuckyFruit),
     };
 
     public static IReadOnlyList<FSHPermission> All { get; } = new ReadOnlyCollection<FSHPermission>(_all);

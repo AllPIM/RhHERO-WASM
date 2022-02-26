@@ -8,6 +8,9 @@
         <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'FSH.BlazorWebAssembly' ">
+      <ExternalConsole>true</ExternalConsole>
+    </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Mapster" Version="7.3.0" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.2" />
@@ -30,5 +33,27 @@
              There's something too much trimmed from Msal in the publish step. Then, after logging in,
              the user gets redirected to authentication/login-failed with no error message. -->
         <TrimmerRootAssembly Include="Microsoft.Authentication.WebAssembly.Msal" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Pages\WholeGame\" />
+      <Folder Include="Pages\InteractGame\" />
+      <Folder Include="Pages\FunCenter\" />
+      <Folder Include="Pages\SingleGame\" />
+      <Folder Include="Pages\InteractGame\LuckyBag\" />
+      <Folder Include="Pages\InteractGame\FingerGuessing\" />
+      <Folder Include="Pages\InteractGame\PrizeWheel\" />
+      <Folder Include="Pages\WholeGame\MotorRacing\" />
+      <Folder Include="Pages\WholeGame\LuckyFruit\" />
+      <Folder Include="Pages\WholeGame\ColourfulBingo\" />
+      <Folder Include="Pages\InteractGame\MysticalNumber\" />
+      <Folder Include="Pages\WholeGame\Jackpot\" />
+      <Folder Include="Pages\SingleGame\Sudoku\" />
+      <Folder Include="Pages\SingleGame\MatchThree\" />
+      <Folder Include="Pages\Loyalty\" />
+      <Folder Include="Pages\Loyalty\WeeklyCheckin\" />
+      <Folder Include="Pages\Loyalty\DailyTask\" />
+      <Folder Include="Pages\Loyalty\TreasureBox\" />
+      <Folder Include="Pages\Loyalty\CampaignTask\" />
+      <Folder Include="Pages\MiniGame\" />
     </ItemGroup>
 </Project>

@@ -117,13 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
   </data>
-  <data name="Simple Chinese" xml:space="preserve">
-    <value>简体中文</value>
+  <data name="Import" xml:space="preserve">
+    <value>導入檔案</value>
   </data>
-  <data name="Traditional Chinese" xml:space="preserve">
-    <value>繁體中文</value>
+  <data name="Please upload excel file!" xml:space="preserve">
+    <value>請上傳 Excel 檔案！</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>上傳</value>
   </data>
 </root>

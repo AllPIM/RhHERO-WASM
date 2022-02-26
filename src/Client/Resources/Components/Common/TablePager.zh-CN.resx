@@ -117,13 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="InfoFormat" xml:space="preserve">
+    <value>{first_item}-{last_item} of {all_items}</value>
   </data>
-  <data name="Simple Chinese" xml:space="preserve">
-    <value>简体中文</value>
-  </data>
-  <data name="Traditional Chinese" xml:space="preserve">
-    <value>繁體中文</value>
+  <data name="RowsPerPageString" xml:space="preserve">
+    <value>毎页行数：</value>
   </data>
 </root>

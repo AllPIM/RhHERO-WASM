@@ -19,10 +19,14 @@ public partial class NavMenu
     private bool _canViewDashboard;
     private bool _canViewRoles;
     private bool _canViewUsers;
-    private bool _canViewProducts;
-    private bool _canViewBrands;
     private bool _canViewTenants;
     private bool CanViewAdministrationGroup => _canViewUsers || _canViewRoles || _canViewTenants;
+
+    private bool _canViewProducts;
+    private bool _canViewBrands;
+
+    private bool _canViewMotorRacing;
+    private bool _canViewLuckyFruit;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -32,8 +36,12 @@ public partial class NavMenu
         _canViewDashboard = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Dashboard);
         _canViewRoles = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Roles);
         _canViewUsers = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Users);
+        _canViewTenants = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Tenants);
+
         _canViewProducts = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Products);
         _canViewBrands = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Brands);
-        _canViewTenants = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Tenants);
+
+        _canViewMotorRacing = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.MotorRacing);
+        _canViewLuckyFruit = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.LuckyFruit);
     }
 }

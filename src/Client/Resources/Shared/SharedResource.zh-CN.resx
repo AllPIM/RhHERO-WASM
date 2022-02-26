@@ -117,13 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
+  <data name="Actions" xml:space="preserve">
+    <value>作业</value>
   </data>
-  <data name="Simple Chinese" xml:space="preserve">
-    <value>简体中文</value>
+  <data name="Advanced Search" xml:space="preserve">
+    <value>进阶搜寻</value>
   </data>
-  <data name="Traditional Chinese" xml:space="preserve">
-    <value>繁體中文</value>
+  <data name="Brand" xml:space="preserve">
+    <value>品牌</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="Reload" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Search for" xml:space="preserve">
+    <value>搜寻项 ...</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>用户</value>
   </data>
 </root>

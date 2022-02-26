@@ -9,6 +9,24 @@
     {
         <MudNavLink Href="/dashboard" Match="NavLinkMatch.All" Icon="@Icons.Filled.Dashboard">@L["Dashboard"]</MudNavLink>
     }
+    @if (_canViewMotorRacing || _canViewLuckyFruit)
+    {
+        <MudText Typo="Typo.subtitle2" Color="Color.Primary" Class="ml-4 my-3">@L["Whole Game"]</MudText>
+        <MudNavGroup Title="@L["Catalog"]" Icon="@Icons.Filled.AddBox">
+            @if (_canViewMotorRacing)
+            {
+                <MudNavLink Href="/wholegame/motorracing/index" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Motor Racing"]
+                </MudNavLink>
+            }
+            @if (_canViewLuckyFruit)
+            {
+                <MudNavLink Href="/wholegame/luckyfruit/index" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Lucky Fruit"]
+                </MudNavLink>
+            }
+        </MudNavGroup>
+    }
     @if (_canViewProducts || _canViewBrands)
     {
         <MudText Typo="Typo.subtitle2" Color="Color.Primary" Class="ml-4 my-3">@L["Management"]</MudText>
