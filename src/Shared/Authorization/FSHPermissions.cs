@@ -29,6 +29,8 @@ public static class FSHResource
 
     public const string MotorRacing = nameof(MotorRacing);
     public const string LuckyFruit = nameof(LuckyFruit);
+    public const string LuckyBag = nameof(LuckyBag);
+    public const string FingerGuessing = nameof(FingerGuessing);
 }
 
 public static class FSHPermissions
@@ -70,12 +72,18 @@ public static class FSHPermissions
         new("Generate Brands", FSHAction.Generate, FSHResource.Brands),
         new("Clean Brands", FSHAction.Clean, FSHResource.Brands),
 
-        new("View MotorRacing", FSHAction.View, FSHResource.MotorRacing, IsBasic: true),
-        new("Search MotorRacing", FSHAction.Search, FSHResource.MotorRacing, IsBasic: true),
-        new("Export MotorRacing", FSHAction.Export, FSHResource.MotorRacing),
-        new("View LuckyFruit", FSHAction.View, FSHResource.LuckyFruit, IsBasic: true),
-        new("Search LuckyFruit", FSHAction.Search, FSHResource.LuckyFruit, IsBasic: true),
-        new("Export LuckyFruit", FSHAction.Export, FSHResource.LuckyFruit),
+        new("View Motor Racing", FSHAction.View, FSHResource.MotorRacing, IsBasic: true),
+        new("Search Motor Racing", FSHAction.Search, FSHResource.MotorRacing, IsBasic: true),
+        new("Export Motor Racing", FSHAction.Export, FSHResource.MotorRacing),
+        new("View Lucky Fruit", FSHAction.View, FSHResource.LuckyFruit, IsBasic: true),
+        new("Search Lucky Fruit", FSHAction.Search, FSHResource.LuckyFruit, IsBasic: true),
+        new("Export Lucky Fruit", FSHAction.Export, FSHResource.LuckyFruit),
+        new("View Lucky Bag", FSHAction.View, FSHResource.LuckyBag, IsBasic: true),
+        new("Search Lucky Bag", FSHAction.Search, FSHResource.LuckyBag, IsBasic: true),
+        new("Export Lucky Bag", FSHAction.Export, FSHResource.LuckyBag),
+        new("View Finger Guessing", FSHAction.View, FSHResource.FingerGuessing, IsBasic: true),
+        new("Search Finger Guessing", FSHAction.Search, FSHResource.FingerGuessing, IsBasic: true),
+        new("Export Finger Guessing", FSHAction.Export, FSHResource.FingerGuessing),
     };
 
     public static IReadOnlyList<FSHPermission> All { get; } = new ReadOnlyCollection<FSHPermission>(_all);
