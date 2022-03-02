@@ -7,7 +7,7 @@ public static class LocalizationConstants
     public static readonly LanguageCode[] SupportedLanguages =
     {
         new("en-US", "English"),
-        new("zh-CN", "Simple Chinese"),
-        new("zh-TW", "Traditional Chinese")
+        new("zh-Hans", "Simple Chinese"),
+        new("zh-Hant", "Traditional Chinese")
     };
 }

@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Account" xml:space="preserve">
-    <value>Account</value>
+    <value>用户帐号</value>
   </data>
   <data name="Buy Me A Coffee!" xml:space="preserve">
-    <value>Buy Me A Coffee!</value>
+    <value>捐赠一杯咖啡！</value>
   </data>
   <data name="Chat?" xml:space="preserve">
-    <value>Chat?</value>
+    <value>上线聊天？</value>
   </data>
   <data name="Community" xml:space="preserve">
-    <value>Community</value>
+    <value>社群</value>
   </data>
   <data name="Facebook Group" xml:space="preserve">
     <value>Facebook Group</value>
@@ -139,45 +139,45 @@
     <value>Fork Repository</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Logout</value>
+    <value>登出</value>
   </data>
   <data name="Logout Confirmation" xml:space="preserve">
-    <value>Do you really want to Logout?</value>
+    <value>是否确定要登出系统？</value>
   </data>
   <data name="MudBlazor Documentation" xml:space="preserve">
     <value>MudBlazor Documentation</value>
   </data>
   <data name="Quick-Start Guide" xml:space="preserve">
-    <value>Quick-Start Guide</value>
+    <value>使用手册</value>
   </data>
   <data name="Refreshed Token." xml:space="preserve">
-    <value>Refreshed Token.</value>
+    <value>刷新 Token.</value>
   </data>
   <data name="Resources" xml:space="preserve">
-    <value>Resources</value>
+    <value>资源</value>
   </data>
   <data name="Support" xml:space="preserve">
-    <value>Support</value>
+    <value>在线支持</value>
   </data>
   <data name="Toggle Dark Mode" xml:space="preserve">
-    <value>Toggle Dark Mode</value>
+    <value>切换成 Dark 模式</value>
   </data>
   <data name="Toggle right-to-left/left-to-right" xml:space="preserve">
-    <value>Toggle right-to-left/left-to-right</value>
+    <value>切换成 Right-to-Left/Left-to-Right</value>
   </data>
   <data name="Welcome {0}" xml:space="preserve">
-    <value>Welcome {0}</value>
+    <value>欢迎 {0}</value>
   </data>
   <data name="You are logged out because the Permissions of one of your Roles have been updated." xml:space="preserve">
-    <value>You are logged out because the Permissions of one of your Roles have been updated.</value>
+    <value>您已被强制登出。（系统平台使用权限已更新）</value>
   </data>
   <data name="You are logged out because the user with your Token has been deleted." xml:space="preserve">
-    <value>You are logged out because the user with your Token has been deleted.</value>
+    <value>您已被强制登出。（连线 Token 已被删除）</value>
   </data>
   <data name="You are Logged Out." xml:space="preserve">
-    <value>You are Logged Out.</value>
+    <value>您已登出系统平台。</value>
   </data>
   <data name="Audit Logs" xml:space="preserve">
-    <value>Audit Logs</value>
+    <value>修改历程</value>
   </data>
 </root>

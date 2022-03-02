@@ -9,20 +9,62 @@
     {
         <MudNavLink Href="/dashboard" Match="NavLinkMatch.All" Icon="@Icons.Filled.Dashboard">@L["Dashboard"]</MudNavLink>
     }
-    @if (_canViewMotorRacing || _canViewLuckyFruit)
+    @if (_canViewMotorRacing || _canViewLuckyFruit || _canViewLuckyBag || _canViewFingerGuessing)
     {
-        <MudText Typo="Typo.subtitle2" Color="Color.Primary" Class="ml-4 my-3">@L["Whole Game"]</MudText>
-        <MudNavGroup Title="@L["Catalog"]" Icon="@Icons.Filled.AddBox">
+        <MudText Typo="Typo.subtitle2" Color="Color.Primary" Class="ml-4 my-3">@L["Fun Center"]</MudText>
+        <MudNavGroup Title="@L["Motor Racing"]" Icon="@Icons.Filled.AddBox">
             @if (_canViewMotorRacing)
             {
-                <MudNavLink Href="/wholegame/motorracing/index" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                <MudNavLink Href="/funcenter/motorracing" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
                     @L["Motor Racing"]
+                </MudNavLink>
+            }
+            @if (_canViewMotorRacing)
+            {
+                <MudNavLink Href="/funcenter/motorracing" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Daily Report"]
+                </MudNavLink>
+            }
+        </MudNavGroup>
+        <MudNavGroup Title="@L["Lucky Fruit"]" Icon="@Icons.Filled.AddBox">
+            @if (_canViewLuckyFruit)
+            {
+                <MudNavLink Href="/funcenter/luckyfruit" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Lucky Fruit"]
                 </MudNavLink>
             }
             @if (_canViewLuckyFruit)
             {
-                <MudNavLink Href="/wholegame/luckyfruit/index" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
-                    @L["Lucky Fruit"]
+                <MudNavLink Href="/funcenter/luckyfruit" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Daily Report"]
+                </MudNavLink>
+            }
+        </MudNavGroup>
+        <MudNavGroup Title="@L["Lucky Bag"]" Icon="@Icons.Filled.AddBox">
+            @if (_canViewLuckyBag)
+            {
+                <MudNavLink Href="/funcenter/luckybag" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Lucky Bag"]
+                </MudNavLink>
+            }
+            @if (_canViewLuckyBag)
+            {
+                <MudNavLink Href="/funcenter/luckybag" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Daily Report"]
+                </MudNavLink>
+            }
+        </MudNavGroup>
+        <MudNavGroup Title="@L["Finger Guessing"]" Icon="@Icons.Filled.AddBox">
+            @if (_canViewFingerGuessing)
+            {
+                <MudNavLink Href="/funcenter/fingerguessing" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Finger Guessing"]
+                </MudNavLink>
+            }
+            @if (_canViewFingerGuessing)
+            {
+                <MudNavLink Href="/funcenter/fingerguessing" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Daily Report"]
                 </MudNavLink>
             }
         </MudNavGroup>

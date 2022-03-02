@@ -27,6 +27,8 @@ public partial class NavMenu
 
     private bool _canViewMotorRacing;
     private bool _canViewLuckyFruit;
+    private bool _canViewLuckyBag;
+    private bool _canViewFingerGuessing;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -43,5 +45,7 @@ public partial class NavMenu
 
         _canViewMotorRacing = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.MotorRacing);
         _canViewLuckyFruit = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.LuckyFruit);
+        _canViewLuckyBag = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.LuckyBag);
+        _canViewFingerGuessing = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.FingerGuessing);
     }
 }
