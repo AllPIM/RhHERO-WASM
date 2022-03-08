@@ -5,6 +5,7 @@
 <MudNavMenu>
     <MudText Typo="Typo.subtitle2" Color="Color.Primary" Class="ml-4 my-3">@L["Start"]</MudText>
     <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">@L["Home"]</MudNavLink>
+    <MudNavLink Href="/blank" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Apps">@L["Blank"]</MudNavLink>
     @if (_canViewDashboard)
     {
         <MudNavLink Href="/dashboard" Match="NavLinkMatch.All" Icon="@Icons.Filled.Dashboard">@L["Dashboard"]</MudNavLink>

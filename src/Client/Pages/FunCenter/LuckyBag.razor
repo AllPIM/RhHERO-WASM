@@ -2,7 +2,24 @@
 
 <FshTitle Title="Lucky Bag" Description="Manage Lucky Bag Rounds." />
 
+<MudToggleIconButton @bind-Toggled="@AlarmOn"
+                     Icon="@Icons.Material.Filled.AlarmOff" Color="@Color.Error" Title="Off"
+                     ToggledIcon="@Icons.Material.Filled.AlarmOn" ToggledColor="@Color.Success" ToggledTitle="On" />
+
+
+<MudToggleIconButton @bind-Toggled="@FlashOn"
+                     Icon="@Icons.Material.Filled.FlashOff" Color="@Color.Error" Title="Off"
+                     ToggledIcon="@Icons.Material.Filled.FlashOn" ToggledColor="@Color.Success" ToggledTitle="On" />
+
+
+<MudToggleIconButton @bind-Toggled="@PublicOn"
+                     Icon="@Icons.Material.Filled.PublicOff" Color="@Color.Error" Title="Off"
+                     ToggledIcon="@Icons.Material.Filled.Public" ToggledColor="@Color.Success" ToggledTitle="On" />
+
+<span>Alarm is @(AlarmOn ? "On" : "Off")</span>
+
 @code {
-
+    public bool AlarmOn { get; set; }
+    public bool FlashOn { get; set; }
+    public bool PublicOn { get; set; }
 }
-

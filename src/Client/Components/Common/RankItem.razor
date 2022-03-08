@@ -1,0 +1,10 @@
+﻿<MudText Typo="Typo.h6" Color="Color.Primary" Class="mb-2">@Title <small>- @Description</small></MudText>
+
+@code
+{
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string? Description { get; set; }
+    [Parameter] public DateTime? Updated { get; set; }
+    [Parameter] public Color? MajorColor { get; set; }
+    [Parameter] public Color? MinorColor { get; set; }
+}

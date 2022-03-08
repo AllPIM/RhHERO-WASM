@@ -1,8 +1,310 @@
 ﻿@page "/blank"
+@inject IStringLocalizer<Blank> L
 
-<FshTitle Title="["空白页"]" Description="["标准样式显示"]" />
+<MudGrid>
+    <MudItem xs="3">
+        <MudGrid Spacing="1">
+            <MudItem xs="12">
+                <MudCard Elevation="25">
+                    <MudCardHeader>
+                        <CardHeaderAvatar>
+                            <MudAvatar Color="Color.Secondary">IP</MudAvatar>
+                        </CardHeaderAvatar>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.body1">Istra Croatia</MudText>
+                            <MudText Typo="Typo.body2">Peninsula in Europe</MudText>
+                        </CardHeaderContent>
+                        <CardHeaderActions>
+                            <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Default" />
+                        </CardHeaderActions>
+                    </MudCardHeader>
+                    <MudCardContent Style="padding:0px!important" Class="d-flex justify-center">
+                        <div class="d-flex justify-center">
+                            <MudAvatar Square="true" Color="Color.Primary" Style="width:100%;height:20px;"></MudAvatar>
+                        </div>                        
+                        <MudGrid Spacing="1" Justify="Justify.Center">
+                            <MudItem xs="3" Style="" Class="d-flex justify-center">
+                                <MudText Typo="Typo.body1" Align="Align.Center" Color="Color.Surface">Rate</MudText>
+                            </MudItem>
+                            <MudItem xs="9" Class="d-flex justify-center">
+                                <MudRating ReadOnly="false" SelectedValue="2" Size="Size.Large" />
+                            </MudItem>
+                            <MudItem xs="9" Style="right" Class="d-flex justify-center right">
+                                <span>Power is @(PowerOn ? "On" : "Off")</span>
+                            </MudItem>
+                            <MudItem xs="3" Class="d-flex justify-center">
+                                <MudToggleIconButton @bind-Toggled="@PowerOn"
+                                                     Icon="@Icons.Material.Filled.PowerOff" Color="@Color.Error" Title="Off"
+                                                     ToggledIcon="@Icons.Material.Filled.Power" ToggledColor="@Color.Success" ToggledTitle="On" />
+                            </MudItem>
+                            <MudItem xs="9" Style="right" Class="d-flex justify-center right">
+                                <span>Alarm is @(AlarmOn ? "On" : "Off")</span>
+                            </MudItem>
+                            <MudItem xs="3" Class="d-flex justify-center">
+                                <MudToggleIconButton @bind-Toggled="@AlarmOn"
+                                                     Icon="@Icons.Material.Filled.AlarmOff" Color="@Color.Error" Title="Off"
+                                                     ToggledIcon="@Icons.Material.Filled.AlarmOn" ToggledColor="@Color.Success" ToggledTitle="On" />
+                            </MudItem>
+                        </MudGrid>
+                        <div class="d-flex justify-center">
+                            <MudAvatar Square="true" Color="Color.Primary" Style="width:100%;height:20px;"></MudAvatar>
+                        </div>
+                    </MudCardContent>
+                    <MudCardActions Class="d-flex justify-center">
+                        <MudGrid>
+                            <MudItem xs="6">
+                                <MudText Typo="Typo.body1" Align="Align.Center" Color="Color.Primary">2022/03/04<br />22:22:33</MudText>
+                            </MudItem>
+                            <MudItem xs="6">
+                                <MudText Typo="Typo.body1" Align="Align.Center" Color="Color.Surface">2022/03/04<br />22:22:33</MudText>
+                            </MudItem>
+                        </MudGrid>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+            <MudItem xs="12">
+                <MudPaper Class="d-flex align-center justify-center mud-width-full py-6">
+                    <MudText Typo="Typo.h4" Align="Align.Center" Color="Color.Primary">102</MudText>
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12">
+                <MudPaper Class="d-flex align-center justify-center mud-width-full py-6">
+                    <MudText Typo="Typo.h4" Align="Align.Center" Color="Color.Error">INTP</MudText>
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12">
+                <MudPaper Class="d-flex align-center justify-center mud-width-full py-6">
+                    <MudText Typo="Typo.h4" Align="Align.Center" Color="Color.Default">L.22</MudText>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+    
+    <MudItem xs="9">
+        <MudTabs Elevation="1" Color="Color.Transparent" ApplyEffectsToContainer="true" PanelClass="pa-3">
+            <MudTabPanel Text="@L["Timeline"]" Icon="@Icons.Material.Filled.Api">
+                <MudCard Elevation="1">
+                    <MudGrid>
+                        <MudItem>
+                            <MudTimeline>
+                                <TimelineItem Title="Test" Body1="Test Body 1" Body2="Test Body 2" DotColor="Color.Default" />
+                                <MudTimelineItem Color="Color.Dark" Elevation="5">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Dark" Typo="Typo.h6">2022.03</MudText>
+                                        <MudText Color="Color.Dark" Typo="Typo.body2"><strong>03/01</strong>｜12:22</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="0" Class="mt-n1">
+                                            <MudText Color="Color.Dark" Typo="Typo.h6" GutterBottom="true">MudBlazor Emerges</MudText>
+                                            <MudText Typo="Typo.body2">A repository pops up on Github named MudBlazor.</MudText>
+                                            <MudText Typo="Typo.body2">The development has already started and the most common components can be found already.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <ItemOpposite><MudText Typo="Typo.body2" Class="mud-text-secondary"><strong>02/28</strong>｜17:10</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudText Typo="Typo.body2">Packaging complete</MudText>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <ItemOpposite>
+                                        <MudText Typo="Typo.body2" Class="mud-text-secondary"><strong>02/26</strong>｜17:10</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudText Typo="Typo.body2">Waiting for pickup</MudText>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem Color="Color.Primary" Elevation="25" TimelineAlign="TimelineAlign.End">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Primary" Typo="Typo.h6">2022.02</MudText>
+                                        <MudText Color="Color.Dark" Typo="Typo.body2"><strong>02/05</strong>｜19:22</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="0" Class="mt-n1">
+                                            <MudText Color="Color.Primary" Typo="Typo.h6" GutterBottom="true">MudBlazor Unleashed!</MudText>
+                                            <MudText Typo="Typo.body2">The first version is released and uploaded as v1.0.7.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem Color="Color.Dark" Elevation="25">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Secondary" Typo="Typo.h6" GutterBottom="true">2020.11</MudText>
+                                        <MudText Color="Color.Dark" Typo="Typo.body2"><strong>11/02</strong>｜08:22</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="0" Class="mt-n1">
+                                            <MudText Color="Color.Dark" Typo="Typo.h6" GutterBottom="true">First Minor</MudText>
+                                            <MudText Typo="Typo.body2">MudBlazor gets its first minor with version 1.1.0.</MudText>
+                                            <MudText Typo="Typo.body2">TimerPicker, AutoComplete and Charts join the library as well as T versions of our inputs and selects.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Packaging complete</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:10</MudText>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Waiting for pickup</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:15</MudText>
+                                </MudTimelineItem>
+                                <MudTimelineItem Color="Color.Dark" Elevation="5" TimelineAlign="TimelineAlign.End">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Dark" Typo="Typo.h6">2022.03</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="0" Class="mt-n1">
+                                            <MudText Color="Color.Dark" Typo="Typo.h6" GutterBottom="true">MudBlazor Emerges</MudText>
+                                            <MudText Typo="Typo.body2">A repository pops up on Github named MudBlazor.</MudText>
+                                            <MudText Typo="Typo.body2">The development has already started and the most common components can be found already.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Packaging complete</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:10</MudText>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Waiting for pickup</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:15</MudText>
+                                </MudTimelineItem>
+                                <MudTimelineItem Color="Color.Primary" Elevation="25" TimelineAlign="TimelineAlign.End">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Primary" Typo="Typo.h6">Oct 2020</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="0" Class="mt-n1">
+                                            <MudText Color="Color.Primary" Typo="Typo.h6" GutterBottom="true">MudBlazor Unleashed!</MudText>
+                                            <MudText Typo="Typo.body2">The first version is released and uploaded as v1.0.7.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem Color="Color.Secondary" Elevation="25">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Secondary" Typo="Typo.h6" GutterBottom="true">Nov 2020</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="0" Class="mt-n1">
+                                            <MudText Color="Color.Secondary" Typo="Typo.h6" GutterBottom="true">First Minor</MudText>
+                                            <MudText Typo="Typo.body2">MudBlazor gets its first minor with version 1.1.0.</MudText>
+                                            <MudText Typo="Typo.body2">TimerPicker, AutoComplete and Charts join the library as well as T versions of our inputs and selects.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Packaging complete</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:10</MudText>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Waiting for pickup</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:15</MudText>
+                                </MudTimelineItem>
+                            </MudTimeline>
+                        </MudItem>
+                    </MudGrid>
+                </MudCard>
+            </MudTabPanel>
+            <MudTabPanel Text="@L["Coin Records"]">
+                <MudCard Elevation="1">
+                    <MudGrid>
+                        <MudItem>
+                            <MudTimeline>
+                                <MudTimelineItem Color="Color.Dark" Elevation="5">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Dark" Typo="Typo.h6">Aug 2020</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="1" Class="mt-n1">
+                                            <MudText Color="Color.Dark" Typo="Typo.h6" GutterBottom="true">MudBlazor Emerges</MudText>
+                                            <MudText Typo="Typo.body2">A repository pops up on Github named MudBlazor.</MudText>
+                                            <MudText Typo="Typo.body2">The development has already started and the most common components can be found already.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Packaging complete</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:10</MudText>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Waiting for pickup</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:15</MudText>
+                                </MudTimelineItem>
+                                <MudTimelineItem Color="Color.Primary" Elevation="25" TimelineAlign="TimelineAlign.End">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Primary" Typo="Typo.h6">Oct 2020</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="0" Class="mt-n1">
+                                            <MudText Color="Color.Primary" Typo="Typo.h6" GutterBottom="true">MudBlazor Unleashed!</MudText>
+                                            <MudText Typo="Typo.body2">The first version is released and uploaded as v1.0.7.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem Color="Color.Secondary" Elevation="25">
+                                    <ItemOpposite>
+                                        <MudText Color="Color.Secondary" Typo="Typo.h6" GutterBottom="true">Nov 2020</MudText>
+                                    </ItemOpposite>
+                                    <ItemContent>
+                                        <MudPaper Elevation="0" Class="mt-n1">
+                                            <MudText Color="Color.Secondary" Typo="Typo.h6" GutterBottom="true">First Minor</MudText>
+                                            <MudText Typo="Typo.body2">MudBlazor gets its first minor with version 1.1.0.</MudText>
+                                            <MudText Typo="Typo.body2">TimerPicker, AutoComplete and Charts join the library as well as T versions of our inputs and selects.</MudText>
+                                        </MudPaper>
+                                    </ItemContent>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Packaging complete</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:10</MudText>
+                                </MudTimelineItem>
+                                <MudTimelineItem TimelineAlign="TimelineAlign.End">
+                                    <MudText Typo="Typo.body2">Waiting for pickup</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">Yesterday: 17:15</MudText>
+                                </MudTimelineItem>
+                            </MudTimeline>
+                        </MudItem>
+                    </MudGrid>
+                </MudCard>
+            </MudTabPanel>
+            <MudTabPanel Text="@L["Badge Wall"]">
+                <MudGrid>
+                    <MudItem xs="12">
+                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-4">xs=12</MudPaper>
+                    </MudItem>
+                    <MudItem xs="6">
+                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-2">xs=6</MudPaper>
+                    </MudItem>
+                    <MudItem xs="6">
+                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-2">xs=6</MudPaper>
+                    </MudItem>
+                    <MudItem xs="3">
+                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">xs=3</MudPaper>
+                    </MudItem>
+                    <MudItem xs="3">
+                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">xs=3</MudPaper>
+                    </MudItem>
+                    <MudItem xs="3">
+                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">xs=3</MudPaper>
+                    </MudItem>
+                    <MudItem xs="3">
+                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">xs=3</MudPaper>
+                    </MudItem>
+                </MudGrid>
+            </MudTabPanel>
+            <MudTabPanel Text="@L["Gift Bag"]">
+                <MudPaper Elevation="2">GIFT</MudPaper>
+            </MudTabPanel>
+            <MudTabPanel Text="@L["Audit History"]">
+                <MudPaper Elevation="2">AUDIT</MudPaper>
+            </MudTabPanel>
+        </MudTabs>
+    </MudItem>
+</MudGrid>
 
 @code {
-
+    public bool AlarmOn { get; set; }
+    public bool PowerOn { get; set; }
+    public bool _modifiers { get; set; }
+    public bool _outlined { get; set; }
 }
 

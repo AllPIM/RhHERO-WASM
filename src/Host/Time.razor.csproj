@@ -6,6 +6,7 @@
         <AssemblyName>FSH.BlazorWebAssembly.Host</AssemblyName>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'FSH.BlazorWebAssembly.Server' " />
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.2" />
     </ItemGroup>
