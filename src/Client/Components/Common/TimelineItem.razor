@@ -1,7 +1,7 @@
-﻿<MudTimelineItem Color="Color.Primary" Elevation="25" TimelineAlign="TimelineAlign.End">
+﻿<MudTimelineItem Color="Color.Primary" TimelineAlign="TimelineAlign.End">
     <ItemOpposite>
-        <MudText Color="Color.Primary" Typo="Typo.h6">2022.02</MudText>
-        <MudText Color="Color.Primary" Typo="Typo.body2">@Updated</MudText>
+        <MudText Color="Color.Primary" Typo="Typo.h6">@StartMonth</MudText>
+        <MudText Color="Color.Default" Typo="Typo.body2" Class="mud-text-secondary">@UpdatedDate｜@UpdatedTime</MudText>
     </ItemOpposite>
     <ItemContent>
         <MudPaper Elevation="0" Class="mt-n1">
@@ -12,12 +12,11 @@
     </ItemContent>
 </MudTimelineItem>
 
-
 @code
 {
-    [Parameter] public bool? System { get; set; }
-    [Parameter] public DateTime? Updated { get; set; }
-    [Parameter] public bool? StartMonth { get; set; }
+    [Parameter] public string? StartMonth { get; set; }
+    [Parameter] public string? UpdatedDate { get; set; }
+    [Parameter] public string? UpdatedTime { get; set; }
     [Parameter] public Color? DotColor { get; set; }
     [Parameter] public string? Title { get; set; }
     [Parameter] public string? Body1 { get; set; }
