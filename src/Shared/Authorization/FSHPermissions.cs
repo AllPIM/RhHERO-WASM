@@ -27,10 +27,12 @@ public static class FSHResource
     public const string Products = nameof(Products);
     public const string Brands = nameof(Brands);
 
-    public const string MotorRacing = nameof(MotorRacing);
-    public const string LuckyFruit = nameof(LuckyFruit);
-    public const string LuckyBag = nameof(LuckyBag);
-    public const string FingerGuessing = nameof(FingerGuessing);
+    public const string Players = nameof(Players);
+    public const string Bots = nameof(Bots);
+    public const string MotorRacings = nameof(MotorRacings);
+    public const string LuckyFruits = nameof(LuckyFruits);
+    public const string LuckyBags = nameof(LuckyBags);
+    public const string FingerGuessings = nameof(FingerGuessings);
 }
 
 public static class FSHPermissions
@@ -72,18 +74,24 @@ public static class FSHPermissions
         new("Generate Brands", FSHAction.Generate, FSHResource.Brands),
         new("Clean Brands", FSHAction.Clean, FSHResource.Brands),
 
-        new("View Motor Racing", FSHAction.View, FSHResource.MotorRacing, IsBasic: true),
-        new("Search Motor Racing", FSHAction.Search, FSHResource.MotorRacing, IsBasic: true),
-        new("Export Motor Racing", FSHAction.Export, FSHResource.MotorRacing),
-        new("View Lucky Fruit", FSHAction.View, FSHResource.LuckyFruit, IsBasic: true),
-        new("Search Lucky Fruit", FSHAction.Search, FSHResource.LuckyFruit, IsBasic: true),
-        new("Export Lucky Fruit", FSHAction.Export, FSHResource.LuckyFruit),
-        new("View Lucky Bag", FSHAction.View, FSHResource.LuckyBag, IsBasic: true),
-        new("Search Lucky Bag", FSHAction.Search, FSHResource.LuckyBag, IsBasic: true),
-        new("Export Lucky Bag", FSHAction.Export, FSHResource.LuckyBag),
-        new("View Finger Guessing", FSHAction.View, FSHResource.FingerGuessing, IsBasic: true),
-        new("Search Finger Guessing", FSHAction.Search, FSHResource.FingerGuessing, IsBasic: true),
-        new("Export Finger Guessing", FSHAction.Export, FSHResource.FingerGuessing),
+        new ("View Players", FSHAction.View, FSHResource.Players, IsBasic: true),
+        new ("Search Players", FSHAction.Search, FSHResource.Players, IsBasic: true),
+        new ("Export Players", FSHAction.Export, FSHResource.Players),
+        new ("View Bots", FSHAction.View, FSHResource.Bots, IsBasic: true),
+        new ("Search Bots", FSHAction.Search, FSHResource.Bots, IsBasic: true),
+
+        new ("View Motor Racings", FSHAction.View, FSHResource.MotorRacings, IsBasic: true),
+        new ("Search Motor Racings", FSHAction.Search, FSHResource.MotorRacings, IsBasic: true),
+        new ("Export Motor Racings", FSHAction.Export, FSHResource.MotorRacings),
+        new ("View Lucky Fruits", FSHAction.View, FSHResource.LuckyFruits, IsBasic: true),
+        new ("Search Lucky Fruits", FSHAction.Search, FSHResource.LuckyFruits, IsBasic: true),
+        new ("Export Lucky Fruits", FSHAction.Export, FSHResource.LuckyFruits),
+        new ("View Lucky Bags", FSHAction.View, FSHResource.LuckyBags, IsBasic: true),
+        new ("Search Lucky Bags", FSHAction.Search, FSHResource.LuckyBags, IsBasic: true),
+        new ("Export Lucky Bags", FSHAction.Export, FSHResource.LuckyBags),
+        new ("View Finger Guessings", FSHAction.View, FSHResource.FingerGuessings, IsBasic: true),
+        new ("Search Finger Guessings", FSHAction.Search, FSHResource.FingerGuessings, IsBasic: true),
+        new ("Export Finger Guessings", FSHAction.Export, FSHResource.FingerGuessings),
     };
 
     public static IReadOnlyList<FSHPermission> All { get; } = new ReadOnlyCollection<FSHPermission>(_all);

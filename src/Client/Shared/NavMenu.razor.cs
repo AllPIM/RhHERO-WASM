@@ -25,10 +25,12 @@ public partial class NavMenu
     private bool _canViewProducts;
     private bool _canViewBrands;
 
-    private bool _canViewMotorRacing;
-    private bool _canViewLuckyFruit;
-    private bool _canViewLuckyBag;
-    private bool _canViewFingerGuessing;
+    private bool _canViewPlayers;
+    private bool _canViewBots;
+    private bool _canViewMotorRacings;
+    private bool _canViewLuckyFruits;
+    private bool _canViewLuckyBags;
+    private bool _canViewFingerGuessings;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -43,9 +45,11 @@ public partial class NavMenu
         _canViewProducts = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Products);
         _canViewBrands = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Brands);
 
-        _canViewMotorRacing = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.MotorRacing);
-        _canViewLuckyFruit = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.LuckyFruit);
-        _canViewLuckyBag = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.LuckyBag);
-        _canViewFingerGuessing = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.FingerGuessing);
+        _canViewPlayers = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Players);
+        _canViewBots = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.Bots);
+        _canViewMotorRacings = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.MotorRacings);
+        _canViewLuckyFruits = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.LuckyFruits);
+        _canViewLuckyBags = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.LuckyBags);
+        _canViewFingerGuessings = await AuthService.HasPermissionAsync(user, FSHAction.View, FSHResource.FingerGuessings);
     }
 }

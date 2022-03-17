@@ -10,62 +10,52 @@
     {
         <MudNavLink Href="/dashboard" Match="NavLinkMatch.All" Icon="@Icons.Filled.Dashboard">@L["Dashboard"]</MudNavLink>
     }
-    @if (_canViewMotorRacing || _canViewLuckyFruit || _canViewLuckyBag || _canViewFingerGuessing)
+    @if (_canViewPlayers || _canViewBots || _canViewMotorRacings || _canViewLuckyFruits || _canViewLuckyBags || _canViewFingerGuessings)
     {
         <MudText Typo="Typo.subtitle2" Color="Color.Primary" Class="ml-4 my-3">@L["Fun Center"]</MudText>
         <MudNavGroup Title="@L["Motor Racing"]" Icon="@Icons.Filled.AddBox">
-            @if (_canViewMotorRacing)
+            @if (_canViewMotorRacings)
             {
-                <MudNavLink Href="/funcenter/motorracing" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
-                    @L["Motor Racing"]
-                </MudNavLink>
-            }
-            @if (_canViewMotorRacing)
-            {
-                <MudNavLink Href="/funcenter/motorracing" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
-                    @L["Daily Report"]
+                <MudNavLink Href="/funcenter/motorracings" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Motor Racings"]
                 </MudNavLink>
             }
         </MudNavGroup>
         <MudNavGroup Title="@L["Lucky Fruit"]" Icon="@Icons.Filled.AddBox">
-            @if (_canViewLuckyFruit)
+            @if (_canViewLuckyFruits)
             {
-                <MudNavLink Href="/funcenter/luckyfruit" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                <MudNavLink Href="/funcenter/luckyfruits" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
                     @L["Lucky Fruit"]
-                </MudNavLink>
-            }
-            @if (_canViewLuckyFruit)
-            {
-                <MudNavLink Href="/funcenter/luckyfruit" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
-                    @L["Daily Report"]
                 </MudNavLink>
             }
         </MudNavGroup>
         <MudNavGroup Title="@L["Lucky Bag"]" Icon="@Icons.Filled.AddBox">
-            @if (_canViewLuckyBag)
+            @if (_canViewLuckyBags)
             {
-                <MudNavLink Href="/funcenter/luckybag" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
-                    @L["Lucky Bag"]
-                </MudNavLink>
-            }
-            @if (_canViewLuckyBag)
-            {
-                <MudNavLink Href="/funcenter/luckybag" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
-                    @L["Daily Report"]
+                <MudNavLink Href="/funcenter/luckybags" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Lucky Bags"]
                 </MudNavLink>
             }
         </MudNavGroup>
         <MudNavGroup Title="@L["Finger Guessing"]" Icon="@Icons.Filled.AddBox">
-            @if (_canViewFingerGuessing)
+            @if (_canViewFingerGuessings)
             {
-                <MudNavLink Href="/funcenter/fingerguessing" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
-                    @L["Finger Guessing"]
+                <MudNavLink Href="/funcenter/fingerguessings" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Finger Guessings"]
                 </MudNavLink>
             }
-            @if (_canViewFingerGuessing)
+        </MudNavGroup>
+        <MudNavGroup Title="@L["Players & Bots"]" Icon="@Icons.Filled.AddBox">
+            @if (_canViewPlayers)
             {
-                <MudNavLink Href="/funcenter/fingerguessing" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
-                    @L["Daily Report"]
+                <MudNavLink Href="/funcenter/players" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Players"]
+                </MudNavLink>
+            }
+            @if (_canViewBots)
+            {
+                <MudNavLink Href="/funcenter/bots" Icon="@Icons.Filled.ShoppingBag" Class="fsh-nav-child">
+                    @L["Bots"]
                 </MudNavLink>
             }
         </MudNavGroup>

@@ -1,4 +1,9 @@
-﻿<h3>Component1</h3>
+﻿@page "/funcenter/players"
+@attribute [MustHavePermission(FSHAction.View, FSHResource.Players)]
+
+@inject IStringLocalizer<MotorRacings> L
+
+<FshTitle Title="Players" Description="Manage Players." />
 
 @code {
 
